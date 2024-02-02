@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+
+<VBox alignment="CENTER" prefHeight="538.0" prefWidth="566.0" spacing="20.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.chromread_2.MainWindowController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <children>
+        <TabPane fx:id="tabPane" prefHeight="526.0" prefWidth="526.0">
+            <tabs>
+                <Tab fx:id="openTab" closable="false" text="O">
+                    <content>
+                        <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+                            <children>
+                                <Button fx:id="btnOpenFile" layoutX="63.0" layoutY="23.0" mnemonicParsing="false" onAction="#openFile" prefHeight="50.0" prefWidth="91.0" text="Open File" />
+                                <Button layoutX="206.0" layoutY="23.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="91.0" text="Create from&#10; Function" />
+                                <Button layoutX="347.0" layoutY="23.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="91.0" text="Create from&#10; Text" />
+                                <ComboBox fx:id="comboY" layoutX="63.0" layoutY="108.0" onAction="#selectYArray" prefHeight="25.0" prefWidth="184.0" />
+                                <ComboBox fx:id="comboX" layoutX="261.0" layoutY="108.0" onAction="#selectXArray" prefHeight="25.0" prefWidth="177.0" />
+                                <Label fx:id="labelY" layoutX="123.0" layoutY="85.0" prefHeight="17.0" prefWidth="62.0" text="Set Y-array" textAlignment="CENTER" />
+                                <Label layoutX="307.0" layoutY="85.0" prefHeight="17.0" prefWidth="68.0" text="Set X-array" textAlignment="CENTER" />
+                                <Label layoutX="322.0" layoutY="137.0" prefHeight="17.0" prefWidth="52.0" text="X units" textAlignment="CENTER" />
+                                <Label layoutX="132.0" layoutY="138.0" prefHeight="17.0" prefWidth="45.0" text="Y units" />
+                                <TextField fx:id="yUnitText" layoutX="63.0" layoutY="155.0" onAction="#assignYUnit" prefHeight="25.0" prefWidth="182.0" />
+                                <TextField layoutX="261.0" layoutY="155.0" onAction="#assignXUnit" prefHeight="25.0" prefWidth="177.0" fx:id="xUnitText" />
+                                <Label layoutX="64.0" layoutY="198.0" text="Take fragment From:" />
+                                <TextField fx:id="startChromFrom" layoutX="178.0" layoutY="194.0" onAction="#setStartChromFrom" prefHeight="25.0" prefWidth="70.0" />
+                                <TextField fx:id="endChromAt" layoutX="287.0" layoutY="194.0" onAction="#setEndChromAt" prefHeight="25.0" prefWidth="94.0" />
+                                <Label layoutX="264.0" layoutY="198.0" text="To:" />
+                                <Label layoutX="390.0" layoutY="199.0" prefHeight="17.0" prefWidth="44.0" text="X-units" fx:id="xUnitLabel" />
+                                <Label layoutX="64.0" layoutY="273.0" text="Take peaks higher than" />
+                                <TextField fx:id="numberOfPeaks" layoutX="195.0" layoutY="231.0" onAction="#setNumberOfPeaks" prefHeight="25.0" prefWidth="53.0" />
+                                <Label layoutX="264.0" layoutY="235.0" text="highest peaks from the fragment" />
+                                <Label layoutX="99.0" layoutY="320.0" text="Choose integration method " />
+                                <ComboBox fx:id="comboMethod" layoutX="264.0" layoutY="316.0" onAction="#selectComboMethod" prefHeight="25.0" prefWidth="174.0" />
+                                <Label layoutX="99.0" layoutY="357.0" text="Normalized chromatogram" />
+                                <CheckBox fx:id="normalizationCheck" layoutX="263.0" layoutY="355.0" mnemonicParsing="false" onAction="#checkNormalization" />
+                                <Button fx:id="btnCreateChromTab" layoutX="64.0" layoutY="389.0" mnemonicParsing="false" onAction="#createChromTab" prefHeight="25.0" prefWidth="380.0" text="Generate chromatogram" />
+                                <TextField fx:id="threshold" layoutX="197.0" layoutY="269.0" onAction="#setThreshold" prefHeight="25.0" prefWidth="51.0" />
+                                <Label layoutX="142.0" layoutY="235.0" text="Take" />
+                                <Label fx:id="yUnitLabel" layoutX="268.0" layoutY="273.0" prefHeight="17.0" prefWidth="58.0" text="Y-units" />
+                            </children>
+
+                        </AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </children>
+</VBox>
