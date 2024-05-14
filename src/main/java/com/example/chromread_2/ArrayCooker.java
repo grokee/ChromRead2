@@ -21,7 +21,7 @@ public class ArrayCooker {
     public void loadFile(String path){
         FileLoader fl = new FileLoader();
         dataFromFile = fl.getDataFromFile(path);
-        fileExtension = fl.getExtenction(path);
+        fileExtension = fl.getExtension(path);
     }
 
     // method invokes appropriate method to find Arrays (as String) in Data and creates list of these Arrays

@@ -21,7 +21,7 @@ public class FileLoader {
 
     public String getDataFromFile(String path) {
         String stringFromFile = "";
-        String fileExtenction = "";
+        String fileExtension = "";
         byte[] byteFromFile = "".getBytes();
         try {
             byteFromFile = Files.readAllBytes(Paths.get(path));
@@ -38,14 +38,14 @@ public class FileLoader {
 
     }
 
-    public String getExtenction(String path) {
-        String extenction = "";
+    public String getExtension(String path) {
+        String extansion = "";
         Pattern pattern = Pattern.compile(".*\\.([a-zA-Z]+)");
         Matcher matcher = pattern.matcher(path);
         if (matcher.find()) {
-            extenction = matcher.group(1);
+            extansion = matcher.group(1);
         }
-        return extenction;
+        return extansion;
     }
 
 

@@ -15,7 +15,7 @@ public class MainWindow extends Application {
         stage.setMinWidth(520);
         stage.setMinHeight(520);
 
-        stage.setTitle("Hello!");
+        stage.setTitle("ChromRead");
         stage.setScene(scene);
         stage.show();
     }
