@@ -84,7 +84,7 @@ public class MainWindowController {
     }
 
     public void setYLabels() {
-        comboY.getItems().removeAll();
+        comboY.getItems().clear();
         comboY.setItems(chromData.getYLabelsList());
         comboY.getSelectionModel().selectFirst();
     }
@@ -94,7 +94,7 @@ public class MainWindowController {
         yLabel = comboY.getValue().toString();
         System.out.println(yLabel);
         chromData.setYArrayFromLabel(yLabel);
-        comboX.getItems().removeAll();
+        comboX.getItems().clear();
         comboX.getItems().addAll(chromData.getXLabelsList(yLabel));
         comboX.getSelectionModel().selectFirst();
     }
