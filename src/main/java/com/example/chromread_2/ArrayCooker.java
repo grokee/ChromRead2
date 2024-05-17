@@ -77,9 +77,9 @@ public class ArrayCooker {
                     }
                 }
                 if (stringIsHomogenic == false) {
-                    outputMapOfArray.put(getPaddedString(string), null);
+                    outputMapOfArray.put(getPaddedString(splittedString.length + " || " + string), null);
                 } else {
-                    outputMapOfArray.put(getPaddedString(string), doubleArray);
+                    outputMapOfArray.put(getPaddedString(splittedString.length + " || " + string), doubleArray);
                 }
                 listSize.add(splittedString.length);
             } else {
@@ -93,8 +93,8 @@ public class ArrayCooker {
                         }
                         multiplyArray[i] = value * i;
                     }
-                    String info_div = value + " // incremented by 1/" + value + " " + length + " times               ";
-                    String info_mult = value + " // incremented by " + value + " " + +length + "times                 ";
+                    String info_div = length + " || step = 1/" + value ;
+                    String info_mult = length + " || step " + value;
                     outputMapOfArray.put(getPaddedString(info_div), divideArray);
                     outputMapOfArray.put(getPaddedString(info_mult), multiplyArray);
                 }
