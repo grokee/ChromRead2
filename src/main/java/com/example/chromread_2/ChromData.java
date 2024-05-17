@@ -57,6 +57,7 @@ public class ChromData {
         if ((yLabel!= null) && (arrayY.length != 0)) {
             for (int i = 0; i < entryArray.length; i++) {
                 if ((entryArray[i].getValue().length == arrayY.length) && (!yLabel.contains(entryArray[i].getKey().substring(0, 40)))) {
+                    System.out.println();
                     obsStringArray.add(entryArray[i].getKey().substring(0, 40));
                 }
             }
